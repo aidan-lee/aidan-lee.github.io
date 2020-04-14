@@ -2,20 +2,278 @@
 
 <html>
     <head>
-        <title>Aidan Lee</title>
+        <title>Jelly Light</title>
         
         <!-- Including Bootstrap -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-        
-        
+                
         <link rel="stylesheet" type="text/css" href="common.css">
 
     </head>
 
     <body>
-        <h2>Hello World.</h2>
-        <p>I'm Aidan Lee, a 5th year software engineering student at the University of Calgary.</p>
-        <p>More content to come.</p>
+        <h1>Jelly Light</h1>
+        <div class="section">
+            <h2>Abstract</h2>
+            <p class="paragraph-margin">
+                This is a final project created for CPSC 599.88 (Tangible & Physical HCI).  Students were tasked with creating a wearable 
+                TUI that is inspired by hygge, the Scandinavian concept of coziness and its associated connotations.   In response to this,  
+                I reflected on my own definition of hygge and created a jellyfish shaped reading light intended to be used when reading before 
+                going to bed.  This design of this light takes into account the fact that hygge moments cannot last forever, and 
+                gently reminds the user that their reading time is limited.      
+            </p>
+            <p class="paragraph-margin">
+                The jelly light is a mixture of a timed reading light and a scarf.  Users are able to set the amount of time they would like to
+                read, and the jelly light will glow with white light, decreasing the intensity proportionally to the amount of time remaining.
+                When the light turns off, users know that their reading time is up.  
+            </p>
+            <p>
+                The jelly light consists of an Arduino Mega, its associated circuitry, and a crochet embodiment.  All electrical components are
+                encapsulated within the crochet embodiment, and several electrical components were augmented with conductive thread to further 
+                integrate the electrical and crochet elements.
+            </p>
+        </div>
+        <div class="section">
+            <h2>Visuals</h2>
+            <h3>The Process</h3>
+            <p>Several images taken throughout the design and construction process.</p>
+            </br>
+            <img class="visual" src="assets/concept.jpg" alt="Jelly light concept">
+            <p class="caption">A rough sketch depicting the jelly light concept.</p>
+            <img class="visual" src="assets/circuit-inprogress.jpg" alt="Circuit in progess">
+            <p class="caption">One of the early iterations of my circuitry.</p>
+            <img class="visual" src="assets/hearts.jpg" alt="Jelly hearts">
+            <p class="caption">The front and backside of a heart sensor, taken before sewing it onto the jellyfish bell.</p>
+
+            <h3>The Final Product</h3>
+            <p>Several images of the finished product.</p>
+            </br>
+            <img class="visual" src="assets/jellyFull.jpg" alt="Jelly light full">
+            <p class="caption">The finished jelly light.</p>
+            <img class="visual" src="assets/jellyBell.jpg" alt="Jelly light bell">
+            <p class="caption">A closeup of the jelly light's bell.</p>
+            <div class="row">
+                <img class="visual" src="assets/jellyMaskLight.jpg" alt="Jelly with mask">
+                <img class="visual" src="assets/jellyMaskDark.jpg" alt="Jelly with mask in the dark">
+            </div>
+            <p class="caption">The jelly light, wearing its sleep mask.  </p>
+ 
+
+        </div>
+
+        <div class="section">
+            <h2>Usage</h2>
+            <p>
+                The jelly light allows the user to select the amount of time they would like to read for.  Once the user uses gives the bookmark
+                to the jellyfish, it will glow with an intensity proportional to the amount of time the user has left to read. At this point, users 
+                can either put the jelly light on or leave it on their desk.  After this time
+                has elapsed, the light shuts off.  At this point, it is time for bed.  The user can place an eye mask on the jelly light, and it will
+                cycle through various RGB colours for a set amount of time as the user sleeps.  After this time has elapsed, it is time for the user to wake up.
+                The jelly light turns off the RGB light and slowly increases the intensity of a white light, in hopes of waking the user up.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Video Demonstration</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/b69ZZdInQDA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="section">
+            <h2>Arduino Code</h2>
+            <div class="row">
+                <p>The code used for this project can be found&nbsp;</p> 
+                <a href="https://github.com/aidan-lee/JellyLight">here</a>
+                <p>.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Circuit Schematic</h2>
+            <p>
+                The following is a diagram of my circuit.  Note that the switches were wired in part using conductive thread
+                in order to integrate with the embodiment.
+            </p>
+            <img src="assets/circuitSchematic.jpg" alt="Circuit schematic">
+        </div>
+
+        <div class="section">
+            <h2>Embodiment</h2>
+            <p class="paragraph-margin">
+                The embodiment of the jelly light is primarily crochet.  I designed this pattern to be large enough to house
+                an Arduino Mega, while being cozy enough to wear.
+            </p>
+            <p class="paragraph-margin">
+                If you're curious as to what my embodiment process was, read on!  
+                If you'd like to recreate it, note that all terminology is in US terms.
+            </p>
+
+            <h3>Jellyfish Bell</h3>
+                <p class="paragraph-margin">Note: Use a looser gauge here, as the light from the LEDs will need to shine through the bell.</p>
+                <ol>
+                    <li>
+                        sc 6 into a magic circle
+                    </li>
+                    <li>
+                        (inc) x 6
+                    </li>
+                    <li>
+                        (sc, inc, sc) x 6
+                    </li>
+                    <li>
+                        (3sc, inc) x 6
+                    </li>
+                    <li> 
+                        (2sc, inc, 2sc) x 6
+                    </li>
+                    <li>
+                        (5sc, inc) x 6
+                    </li>
+                    <li> 
+                        (3sc, inc, 3sc) x 6
+                    </li>
+                    <li>
+                        (sc around) x 5
+                    </li>
+                    <li>
+                        (sc, skip next sc, 5dc in sc, skip next sc) around
+                    </li>
+                    <li>
+                        F/O
+                    </li>
+                </ol>
+            <h3>Tentacles</h3>
+            <p class="paragraph-margin">Make as many or as few of these as necessary.</p>
+            <div class="tentacle-container">
+                <h4>Curly</h4>
+                <ol>
+                    <li>
+                        Chain until desired length is reached
+                    </li>
+                    <li>
+                        Turn, skip the st closest to the hook, and work 2 hdc into every st until the end of the foundation chain
+                    </li>
+                    <li>
+                        F/O
+                    </li>
+                </ol>
+            </div>
+            <div class="tentacle-container">
+                <h4>Wavy</h4>
+                <ol>
+                    <li>
+                        Chain until desired length is reached
+                    </li>
+                    <li>
+                        Turn, skip the st closest to the hook, and work (2 hdc in one, 1hdc) until the end of the foundation chain
+                    </li>
+                    <li>
+                        At the end of the chain, ch 1 and work (2 hdc in one, 1hdc) on the other side of the chain.
+                    </li>
+                    <li>
+                        F/O
+                    </li>
+                </ol>
+            </div>
+            <div class="tentacle-container">
+                <h4>Straight</h4>
+                <ol>
+                    <li>
+                        Chain 4
+                    </li>
+                    <li>
+                        Work rows of Tunisian simple stich until the desired lengh is reached
+                    </li>
+                    <li>
+                        F/O
+                    </li>
+                </ol>
+            </div>
+
+            <h3>Hearts</h3>
+            <div class="row">
+                <p>Make four of&nbsp;</p>
+                <a href="https://www.planetjune.com/blog/free-crochet-patterns/love-hearts/">Planet June's small hearts</a>
+                <p class="paragraph-margin">.</p>
+            </div>
+
+       
+            <h3>Assembly</h3>
+            <ol>
+                <li>
+                    <p class="paragraph-margin">Sew several inches of conductive yarn into the bottoms of the four hearts, as shown in the image below.</p>
+                    <img class="embodiment-visual" src="assets/heart-backside.jpg" alt="Heart underside">
+                </li>
+                <li>
+                    <p class="paragraph-margin">Sew each heart onto the bell, being careful to leave the conductive thread exposed, as shown in the image below.</p>
+                    <img class="embodiment-visual" src="assets/heart-construction.jpg" alt="Heart construction">
+                </li>
+                <li>
+                    Pull all conductive thread ends through the fabric to the inside of the bell.  Use alligator clips to attach them to each of the A2, A4, A5, A6 sensors in your circuit.
+                </li>
+                <li>
+                    Tie a length of conductive thread to a ring or other conductive item and use an alligator clip to attach it to the A1 sensor in your circuit.  
+                </li>
+                <li>
+                    Cut out a circle of cardboard and place the Arduino and breadboard on top.  This will act as a platform to hold your electrical components.
+                </li>
+                <li>
+                    Make several holes in the cardboard and use these to attach your tentacles by threading the loose ends through the holes.  
+                </li>
+                <li>
+                    Place the bell over the circuitry, and insert the prongs of the photocell through the fabric.  Underneath the bell,
+                    insert the prongs into the appropriate spots on the breadboard.  
+
+                    Once finished, it should look similar to the image below.
+                    <img class="embodiment-visual" src="assets/photocell.jpg" alt="Heart construction">
+                </li>
+                <li>
+                    Thread scrap pieces of yarn through these holes to tie the bell and the cardboard together.
+                    The Arduino and circuitry should now be contained within your jellyfish.
+                </li>
+                <li>
+                    All done! Happy reading.
+                </li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>Reference Materials</h2>
+            <p class="paragraph-margin">In creating this project, the following references were used.</p>
+            <ul>
+                <li>
+                    <h3>Arduino's Fade Example</h3>
+                    <p>The code in this tutorial modified for use in my code, where it was applied to fade the white LEDs on or off.</p>
+                    <a href="https://www.arduino.cc/en/tutorial/fade">Found here.</a>
+                </li>
+                <li>
+                    <h3>Sparkfun's RGB LED Tutorial</h3>
+                    <p>
+                        The circuit schematic in this tutorial was used to wire the RGB LEDs in my own circuitry.  Additionally, their
+                        showRGB() and showSpectrum() functions were repurpose and slightly modified for use in my code.
+                    </p>
+                    <a href="https://learn.sparkfun.com/tutorials/sik-experiment-guide-for-arduino---v32/experiment-3-driving-an-rgb-led">Found here.</a>
+                </li>
+                <li>
+                    <h3>Sparkfun's Photocell Tutorial</h3>
+                    <p>
+                        The circuit schematic in this tutorial was used to wire the photocell in my own circuitry.  Additionally, their
+                        code for reading the value of the photocell was incorporated into my code.
+                    </p>
+                    <a href="https://learn.sparkfun.com/tutorials/photocell-hookup-guide/all">Found here.</a>
+                </li>
+                <li>
+                    <h3>Planet June's Crochet Heart Pattern</h3>
+                    <p>I used the pattern for a small heart to create the hearts on the jelly light.</p>
+                    <a href="https://www.planetjune.com/blog/free-crochet-patterns/love-hearts/">Found here.</a>
+                </li>
+                <li>
+                    <h3>Kobakant's Tilt Sensor</h3>
+                    <p>I took inspiration from Kobakant's tilt sensor to design the heart sensors on the jelly light.</p>
+                    <a href="https://www.kobakant.at/DIY/?p=201">Found here.</a>
+                </li>
+            </ul>
+        </div>
+
     </body>
 </html>
